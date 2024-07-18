@@ -48,24 +48,26 @@ const Contact = () => {
                             idx={15}
                         />
                     </h1>
-                    <p>Here you can send me an email by 
-                        filling in the credentials below.
-                        <br /> you can also view the location
-                        of where I attend college (Kean University).</p>
+                    <p>Here you can send me an email by filling in the credentials below.
+                        <br /> You can also view the location of where I attend college (Kean University).</p>
                     <div className="contact-form">
                         <form ref={form} onSubmit={sendEmail}>
                             <ul>
                                 <li className="half">
-                                    <input placeholder="Name" type="text" name="from_name" required />
+                                    <label htmlFor="name">Name</label>
+                                    <input placeholder="Name" type="text" id="name" name="from_name" autoComplete="name" required />
                                 </li>
                                 <li className="half">
-                                    <input placeholder="Email" type="email" name="email" required />
+                                    <label htmlFor="email">Email</label>
+                                    <input placeholder="Email" type="email" id="email" name="email" autoComplete="email" required />
                                 </li>
                                 <li>
-                                    <input placeholder="Subject" type="text" name="subject" required />
+                                    <label htmlFor="subject">Subject</label>
+                                    <input placeholder="Subject" type="text" id="subject" name="subject" autoComplete="off" required />
                                 </li>
                                 <li>
-                                    <textarea placeholder="Message" name="message" required></textarea>
+                                    <label htmlFor="message">Message</label>
+                                    <textarea placeholder="Message" id="message" name="message" autoComplete="off" required></textarea>
                                 </li>
                                 <li>
                                     <input type="submit" className="flat-button" value="SEND" />

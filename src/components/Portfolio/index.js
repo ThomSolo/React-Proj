@@ -44,6 +44,7 @@ const Portfolio = () => {
       name: "Video Tutorial",
       description: "This is a video tutorial that I did with a group.",
       type: "embed",
+      src: "https://www.youtube.com/embed/OAR4x93ITv0",
       url: "https://www.youtube.com/embed/OAR4x93ITv0",
     }
   ]);
@@ -87,11 +88,9 @@ const Portfolio = () => {
             <div className="content">
               <p className="title">{port.name}</p>
               <h4 className="description">{port.description}</h4>
-              {port.type !== "embed" && (
-                <button className="btn" onClick={() => window.open(port.url, '_blank')}>
-                  View
-                </button>
-              )}
+              <button className="btn" onClick={() => window.open(port.url, '_blank')}>
+                View
+              </button>
             </div>
           </div>
         ))}
